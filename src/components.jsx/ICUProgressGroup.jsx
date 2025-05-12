@@ -18,7 +18,7 @@ export default function ICUProgressGroup({ icuData  ,color}) {
     <div className="space-y-3">
       {icuData.map((item) => (
         <div key={item.label} className="flex items-center justify-between gap-2">
-      <div className={`flex-1 rounded p-2 text-white ${colors[item.label]} rounded` } >
+      <div className={`flex-1 rounded p-2 text-white ${colors[item.label]} rounded w-35` } >
 
             <div className="flex justify-between text-xs text-white mb-1">
               <span>{item.label}</span>

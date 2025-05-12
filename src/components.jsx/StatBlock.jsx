@@ -11,7 +11,7 @@ export default function StatBlock({ label, value, color, opacity = 0.3  ,icon}) 
 
   return (
     <div
-      className="flex flex-row items-center rounded p-1 w-19 rounded gap-2 justify-center align-center"
+      className="flex flex-row items-center rounded p-1 w-25 rounded gap-2  justify-center align-center"
       style={{
         backgroundColor: `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${opacity})`,
       }}

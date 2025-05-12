@@ -12,9 +12,10 @@ export default function OccupancyProgress({ rate, color }) {
 
   return (
     <div
-      className="rounded p-2 space-y-1 text-white"
+      className="rounded p-2 space-y-6 text-white "
       style={{
         backgroundColor: `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.3)`,
+     
       }}
     >
       <div className="flex justify-between text-xs text-white">

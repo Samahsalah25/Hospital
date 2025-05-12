@@ -68,7 +68,7 @@ export const hospitals = [
           { label: "CCU", rate: 82, total: 448, vacant: 99 },
           { label: "NuroICU", rate: 25, total: 448, vacant: 99 },
         ],
-        color: "green",
+        color: "red",
             icon:"H"
       },
       {
@@ -96,7 +96,7 @@ export const hospitals = [
           { label: "CCU", rate: 82, total: 448, vacant: 99 },
           { label: "NuroICU", rate: 25, total: 448, vacant: 99 },
         ],
-        color: "green",
+        color: "red",
             icon:"H"
       },
       {
@@ -110,7 +110,7 @@ export const hospitals = [
           { label: "CCU", rate: 82, total: 448, vacant: 99 },
           { label: "NuroICU", rate: 25, total: 448, vacant: 99 },
         ],
-        color: "green",
+        color: "yellow",
             icon:"H"
       }
   ];

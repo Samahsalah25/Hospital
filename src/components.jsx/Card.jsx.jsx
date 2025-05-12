@@ -14,11 +14,11 @@ export default function Card({ hospital }) {
   };
 
   return (
-    <div className="rounded-lg p-4  bg-transparent space-y-4  h-full grid grid-cols-[auto_1fr_1fr] gap-4 "  >
+    <div className="rounded-lg p-4  bg-transparent space-y-4  h-full grid grid-cols-[auto_1fr_1fr] gap-2 "  >
       {/* العمود الأول: اسم المستشفى */}
     
          <div
-        className={`flex flex-col justify-center align-center items-center gap-3 p-1 rounded ${colors[hospital.color]} h-full`} 
+        className={`flex flex-col justify-center align-center items-center gap-1 p-1 rounded ${colors[hospital.color]} h-full w-12`} 
         style={{ backgroundColor: colors[hospital.color] }} // التأكد من ظهور اللون الخلفي
       >
         {/* اسم المستشفى مائل 270 درجة */}
@@ -31,14 +31,14 @@ export default function Card({ hospital }) {
         </div>
       </div>
       {/* العمود الثاني: نسبة الإشغال */}
-      <div className="grid grid-rows-2 gap-2 w-full h-full">
+      <div className="grid grid-rows-2  w-full h-full">
         {/* الصف الأول: نسبة الإشغال */}
-        <div className="w-full">
+        <div className="w-full ">
           <OccupancyProgress rate={hospital.occupancyRate} color={hospital.color} />
         </div>
 
         {/* الصف الثاني: StatBlocks (Total, Vacant, Occupied) */}
-        <div className="flex justify-between gap-1 w-full">
+        <div className="flex justify-between  w-full">
           <StatBlock label="Total" value={hospital.totalBeds}  color={hospital.color}   icon={<FaBed className="text-white" />} />
           <StatBlock label="Vacant" value={hospital.vacantBeds}  color={hospital.color}   icon={<FaBed className="text-white" />} />
           <StatBlock label="Occupied" value={hospital.occupiedBeds}  color={hospital.color}  icon={<FaBed className="text-white " />} />
