@@ -9,7 +9,7 @@ function App() {
   return (
     <>
     <div className="m-0 p-4 min-h-screen w-full  px-4">
-  <div className="grid grid-cols-1 md:grid-cols-2  w-full">
+  <div className="grid grid-cols-1 md:grid-cols-2 grid  w-full">
     
     {hospitals.map((hospital, index) => (
       <Card key={index} hospital={hospital} />
