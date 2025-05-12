@@ -1,18 +1,26 @@
 import StatBlock from "./StatBlock";
-
-export default function ICUProgressGroup({ icuData }) {
+import { FaBed, FaCheckCircle } from "react-icons/fa";
+export default function ICUProgressGroup({ icuData  ,color}) {
   const colors = {
-    ICU: "bg-yellow-500",
-    CCU: "bg-red-500",
-    NuroICU: "bg-green-500",
+    ICU: "bg-yellow-500/30",
+    CCU: "bg-red-500/30",
+    NuroICU: "bg-green-500/30",
+  };
+
+  const colorss = {
+    gray: [107, 114, 128],   
+    red: [248, 113, 113],    
+    green: [34, 197, 94],    
+    yellow: [234, 179, 8],   
   };
 
   return (
     <div className="space-y-3">
       {icuData.map((item) => (
         <div key={item.label} className="flex items-center justify-between gap-2">
-          <div className="flex-1">
-            <div className="flex justify-between text-xs text-gray-600 mb-1">
+      <div className={`flex-1 rounded p-2 text-white ${colors[item.label]} rounded` } >
+
+            <div className="flex justify-between text-xs text-white mb-1">
               <span>{item.label}</span>
               <span>{item.rate}%</span>
             </div>
@@ -25,8 +33,8 @@ export default function ICUProgressGroup({ icuData }) {
           </div>
 
           <div className="flex gap-1">
-            <StatBlock label="Total" value={item.total} />
-            <StatBlock label="Vacant" value={item.vacant} />
+            <StatBlock label="Total" value={item.total}  icon={<FaBed className="text-white" />} color={color} />
+            <StatBlock label="Vacant" value={item.vacant} icon={<FaBed className="text-white" />  } color={color}/>
           </div>
         </div>
       ))}
