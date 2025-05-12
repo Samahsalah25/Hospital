@@ -8,13 +8,14 @@ function App() {
 
   return (
     <>
-    <div className="p-4 min-h-screen bg-gray-50">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {hospitals.map((hospital, index) => (
-          <Card key={index} hospital={hospital} />
-        ))}
-      </div>
-    </div>
+    <div className="m-0 p-4 min-h-screen w-full container mx-auto px-4">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+    {hospitals.map((hospital, index) => (
+      <Card key={index} hospital={hospital} />
+    ))}
+  </div>
+</div>
+
     </>
   )
 }
